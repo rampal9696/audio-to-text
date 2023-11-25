@@ -4,7 +4,7 @@ const fs = require('fs');
 process.env.GOOGLE_APPLICATION_CREDENTIALS = 'myInfo.json';
 const speech = require('@google-cloud/speech');
 const app = express();
-const port = 3001;
+const port = 3000;
 
 const upload = multer({ dest: 'uploads/' });
 
