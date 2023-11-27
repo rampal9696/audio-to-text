@@ -41,7 +41,7 @@ app.post('/upload', upload.single('audio'), async (req, res) => {
         console.log(response.results[0].alternatives[0])
         const transcription = await response.results.map(result => result.alternatives[0].transcript).join(' ');
         // Display the extracted text
-        res.send(`${transcription}`);
+        res.send(`<p id="result-data">${transcription}.</p>`);
         console.log("audio to text convert successfully");
     } catch (err) {
         console.error(err);
